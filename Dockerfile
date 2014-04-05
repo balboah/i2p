@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y i2p
 # Add configuration that will let non-localhost connect to the web interface
 ADD config /root/.i2p
 
-ENTRYPOINT ["/usr/bin/i2prouter"]
-CMD ["launchdinternal"]
+CMD ["/usr/bin/i2prouter", "launchdinternal"]
 
 # Web interface
 EXPOSE 7657
